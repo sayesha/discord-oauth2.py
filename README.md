@@ -32,13 +32,13 @@ app = Flask(__name__)
 # client.update_linked_roles_metadata([
 #   {
 #       "type": 7,
-#       "key": "guild_1086839511536898118",
+#       "key": "guild_767719630570782750",
 #       "name": "Staff", # In Appeal Server
 #       "description": "This person is in the appeal server."
 #   },
 #   {
 #       "type": 7,
-#       "key": "guild_1086839511536898118_owner",
+#       "key": "guild_767719630570782750_owner",
 #       "name": "Owner", # In Appeal Server
 #       "description": "This person is the owner of the appeal server."
 #   }
@@ -56,13 +56,13 @@ def linkedroles_supportteam():
   
   guild_1086839511536898118_owner = False
   for guild in guilds:
-    if guild["id"] == "1086839511536898118":
-      guild_1086839511536898118_owner = guild["owner"]
+    if guild["id"] == "767719630570782750":
+      guild_767719630570782750_owner = guild["owner"]
       break
   
   access.update_metadata("Love Lounge",
-    guild_1086839511536898118="1086839511536898118" in guild_ids,
-    guild_1086839511536898118_owner=guild_1086839511536898118_owner)
+    guild_767719630570782750="767719630570782750" in guild_ids,
+    guild_767719630570782750_owner=guild_767719630570782750_owner)
   
   return "upated your metadata!"
 
